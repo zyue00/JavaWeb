@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gzu.javawebproject.mapper.GradeMapper">
+
+    <!-- 查询学生的成绩记录 -->
+    <select id="selectByStudentId" resultType="com.gzu.javawebproject.entity.Grade">
+        SELECT * FROM grade WHERE student_id = #{studentId}
+    </select>
+
+    <!-- 查询某课程的所有成绩 -->
+    <select id="selectByCourseId" resultType="com.gzu.javawebproject.entity.Grade">
+        SELECT * FROM grade WHERE course_id = #{courseId}
+    </select>
+
+</mapper>

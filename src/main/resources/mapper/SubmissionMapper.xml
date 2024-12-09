@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gzu.javawebproject.mapper.SubmissionMapper">
+
+    <!-- 查询学生的作业提交记录 -->
+    <select id="selectByStudentId" resultType="com.gzu.javawebproject.entity.Submission">
+        SELECT * FROM assignment_submission WHERE student_id = #{studentId}
+    </select>
+
+    <!-- 查询某作业的提交记录 -->
+    <select id="selectByAssignmentId" resultType="com.gzu.javawebproject.entity.Submission">
+        SELECT * FROM assignment_submission WHERE assignment_id = #{assignmentId}
+    </select>
+
+</mapper>

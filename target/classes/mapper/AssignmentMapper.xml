@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gzu.javawebproject.mapper.AssignmentMapper">
+
+    <!-- 查询某课程的所有作业 -->
+    <select id="selectByCourseId" resultType="com.gzu.javawebproject.entity.Assignment">
+        SELECT * FROM assignment WHERE course_id = #{courseId}
+    </select>
+
+</mapper>

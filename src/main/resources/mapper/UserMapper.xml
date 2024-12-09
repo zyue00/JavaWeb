@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gzu.javawebproject.mapper.UserMapper">
+
+    <!-- 查询所有用户 -->
+    <select id="selectAll" resultType="com.gzu.javawebproject.entity.User">
+        SELECT * FROM user
+    </select>
+
+    <!-- 根据用户名查询用户 -->
+    <select id="selectByUsername" resultType="com.gzu.javawebproject.entity.User">
+        SELECT * FROM user WHERE username = #{username}
+    </select>
+
+</mapper>
